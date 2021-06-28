@@ -164,7 +164,7 @@ SELECT A.libro_id, b.titulo FROM historial_prestamo AS A INNER JOIN Libros AS b 
 -- (0.5 puntos)
 -- _
 
--- FORMA 1 con nombre
+-- FORMA 1 con nombres de socion y titulo de libro
 
 
 SELECT A.nombre,A.Apellido,B.libro_id,titulo,B.fecha_devolucion,B.fecha_prestamo,
