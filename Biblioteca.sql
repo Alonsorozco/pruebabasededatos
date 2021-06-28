@@ -138,7 +138,10 @@ VALUES(5,4444444444444);
 -- Realizar las siguientes consultas:
 -- a. Mostrar todos los libros que posean menos de 300 páginas. (0.5 puntos)
 
-SELECT titulo,pag FROM libros WHERE pag BETWEEN 1 AND 300;
+SELECT titulo,pag 
+FROM libros 
+WHERE pag 
+BETWEEN 1 AND 300;
 
 
 
