@@ -178,7 +178,7 @@ INNER JOIN historial_prestamo AS B ON A.rut =B.socios_id
 INNER JOIN libros
 ON B.libro_id = libros.isbn;
 
--- FORMA 2 con id socion y age
+-- FORMA 2 con id socion y age(funcion)
 
 SELECT socios_id,fecha_prestamo,fecha_devolucion,libro_id,AGE(fecha_devolucion,fecha_prestamo) 
 AS diasprestamo, (fecha_devolucion-fecha_prestamo)-7
