@@ -145,7 +145,10 @@ SELECT titulo,pag FROM libros WHERE pag BETWEEN 1 AND 300;
 -- b. Mostrar todos los autores que hayan nacido después del 01-01-1970.-- (0.5 puntos)
 
 
-SELECT nombre_autor,apellido_autor,nacimiento FROM autores WHERE nacimiento  BETWEEN 1970 AND 2021;
+SELECT nombre_autor,apellido_autor,nacimiento 
+FROM autores 
+WHERE nacimiento  
+BETWEEN 1970 AND 2021;
 
 
 
@@ -154,7 +157,16 @@ SELECT nombre_autor,apellido_autor,nacimiento FROM autores WHERE nacimiento  BET
 -- "having" permite seleccionar (o rechazar) un grupo de registros.
 -- GROUP BY es un comando SQL que se usa para agrupar filas que tienen los mismos valores
 
-SELECT A.libro_id, b.titulo FROM historial_prestamo AS A INNER JOIN Libros AS b ON A.libro_id = b.isbn GROUP BY A.libro_id ,b.titulo HAVING COUNT(*)>1; 
+SELECT A.libro_id, b.titulo 
+FROM historial_prestamo 
+AS A 
+INNER JOIN Libros 
+AS b 
+ON A.libro_id = b.isbn 
+GROUP BY A.libro_id ,b.titulo 
+HAVING COUNT(*)>1; 
+
+
 
 -- (HAVING COUNT(*)>1;  cuenta los registros que estan duplicados)
 
